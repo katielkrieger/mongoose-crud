@@ -1,0 +1,6 @@
+extends ../base.pug
+
+block content
+
+  h1 #{taco.name} - #{taco.numToppings}
+  a(href=`/eaters/${taco.eater.id}/tacos/${taco.id}/edit`) Edit this taco

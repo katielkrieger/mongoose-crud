@@ -1,0 +1,9 @@
+extends ../base.pug
+
+block content
+  a(href=`/eaters/${eater.id}/tacos/new`) Add a new taco
+  h1 See all the tacos for #{eater.name}
+  each taco in eater.tacos
+    p(class="pclass") 
+      span #{taco.name} / #{taco.numToppings} &nbsp;
+      a(href=`/eaters/${eater.id}/tacos/${taco.id}`) See your taco!
